@@ -1,17 +1,30 @@
-import { Button, ThemeProvider, Typography } from '@mui/material';
+import { ThemeProvider, Container, CssBaseline, Box, Typography } from '@mui/material';
 import theme from './theme';
-import { Camera } from 'lucide-react';
-import { Icon } from 'lucide-react';
-import { burger } from '@lucide/lab';
+import BackgroundComponent from './components/core/BackgroundComponent';
+import Logo from './components/core/Logo';
+import { ShoppingCart } from 'lucide-react'
+import MarketingComponent from './components/core/MarketingComponent';
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Typography variant="h1">hello world</Typography>
-      <Button variant="contained">click here</Button>
-      <Camera color="red" size={48} />
-      <Icon iconNode={burger} />
+      <CssBaseline />
+      <BackgroundComponent src="https://res.cloudinary.com/dd8im2juc/image/upload/v1740210215/main_pdl5dx.jpg">
+        <Container sx={{ paddingTop: '20px' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+            <Box sx={{ position: 'absolute', left: '50%', transform: 'translate(-50%)' }}>
+              <Logo />
+            </Box>
+            <Box sx={{ marginLeft: 'auto' }}>
+              <ShoppingCart />
+            </Box>
+          </Box>
+          <MarketingComponent text='Street&#45;Built&#44; Hype-Approved'/>
+        </Container>
+      </BackgroundComponent>
     </ThemeProvider>
   );
 }
+
+
 
 export default App;
