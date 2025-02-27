@@ -47,9 +47,9 @@ export const products: ProductList = [
     },
     category: 'wide',
     image: {
-      thumbnail: '/url2',
-      full: '/url2',
-      product: '/url2'
+      thumbnail: '60x60',
+      full: '250x3000',
+      product: '170x300'
     },
     largeDescription: 'Lorem ipsum dolor sit amet.',
     smallDescription: 'Sed do eiusmod tempor.',
@@ -80,9 +80,9 @@ export const products: ProductList = [
     },
     category: 'casual',
     image: {
-      thumbnail: '/url3',
-      full: '/url3',
-      product: '/url3'
+      thumbnail: '60x60',
+      full: '250x3000',
+      product: '170x300'
     },
     largeDescription: 'Lorem ipsum dolor sit amet.',
     smallDescription: 'Ut enim ad minim veniam.',
@@ -113,9 +113,9 @@ export const products: ProductList = [
     },
     category: 'formal',
     image: {
-      thumbnail: '/url4',
-      full: '/url4',
-      product: '/url4'
+      thumbnail: '60x60',
+      full: '250x3000',
+      product: '170x300'
     },
     largeDescription: 'Dolor sit amet consectetur adipiscing elit.',
     smallDescription: 'Sed do eiusmod tempor incididunt.',
@@ -146,9 +146,9 @@ export const products: ProductList = [
     },
     category: 'sporty',
     image: {
-      thumbnail: '/url5',
-      full: '/url5',
-      product: '/url5'
+      thumbnail: '60x60',
+      full: '250x3000',
+      product: '170x300'
     },
     largeDescription: 'Duis aute irure dolor in reprehenderit.',
     smallDescription: 'Excepteur sint occaecat cupidatat.',
@@ -179,9 +179,9 @@ export const products: ProductList = [
     },
     category: 'narrow',
     image: {
-      thumbnail: '/url6',
-      full: '/url6',
-      product: '/url6'
+      thumbnail: '60x60',
+      full: '250x3000',
+      product: '170x300'
     },
     largeDescription: 'Vivamus magna justo, lacinia eget consectetur.',
     smallDescription: 'Aenean euismod bibendum.',
@@ -212,9 +212,9 @@ export const products: ProductList = [
     },
     category: 'casual',
     image: {
-      thumbnail: '/url7',
-      full: '/url7',
-      product: '/url7'
+      thumbnail: '60x60',
+      full: '250x3000',
+      product: '170x300'
     },
     largeDescription: 'Curabitur pretium tincidunt lacus.',
     smallDescription: 'Mauris magna turpis, gravida vel suscipit eu.',
@@ -245,9 +245,9 @@ export const products: ProductList = [
     },
     category: 'formal',
     image: {
-      thumbnail: '/url8',
-      full: '/url8',
-      product: '/url8'
+      thumbnail: '60x60',
+      full: '250x3000',
+      product: '170x300'
     },
     largeDescription: 'Integer sit amet ligula eget magna ultricies vehicula.',
     smallDescription: 'Pellentesque vitae neque ut purus viverra.',
@@ -278,9 +278,9 @@ export const products: ProductList = [
     },
     category: 'sporty',
     image: {
-      thumbnail: '/url9',
-      full: '/url9',
-      product: '/url9'
+      thumbnail: '60x60',
+      full: '250x3000',
+      product: '170x300'
     },
     largeDescription: 'Nullam vehicula libero sed felis.',
     smallDescription: 'Fusce vel mauris hendrerit quam.',
@@ -311,10 +311,10 @@ export const products: ProductList = [
     },
     category: 'sporty',
     image: {
-      thumbnail: '/url9',
-      full: '/url9',
-      product: '/url9'
-    },
+      thumbnail: '60x60',
+      full: '250x3000',
+      product: '170x300'
+    }, 
     largeDescription: 'Nullam vehicula libero sed felis.',
     smallDescription: 'Fusce vel mauris hendrerit quam.',
     pricing: 1100,
