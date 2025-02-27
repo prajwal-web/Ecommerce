@@ -1,5 +1,5 @@
 export type TMarketingComponent = {
-    text: string
-    type?: 'main_ghp'
-    backgroundColor?: 'secondary'
-}
+  text: string;
+  type?: 'main_ghp';
+  backgroundColor?: string;
+};
