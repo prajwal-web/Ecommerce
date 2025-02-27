@@ -4,9 +4,9 @@ export type Product = {
   id: string;
   size: {
     uk: 28 | 30 | 32 | 34 | 36;
-    us: 's' | 'm' | 'l' | 'xl' | '2xl';
+    us: 's' | 'm' | 'l' | 'xl' | 'xxl';
   };
-  quality: 'cotton' | 'blended' | 'spandex';
+  quality: 'premium' | 'standard' | 'luxury' | 'blended';
   suitability: '14-20' | '21-30' | '31-40';
   pricing: number;
   image: {
@@ -14,7 +14,7 @@ export type Product = {
     product: string;
     full: string;
   };
-  category: 'baggy' | 'narrow' | 'bootcut' | 'straight';
+  category: 'wide' | 'casual' | 'formal' | 'sporty' | 'narrow';
   largeDescription: string;
   smallDescription: string;
   availability: {
