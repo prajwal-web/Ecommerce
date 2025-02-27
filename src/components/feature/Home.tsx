@@ -5,7 +5,7 @@ import Logo from '../core/Logo';
 import MarketingComponent from '../core/MarketingComponent';
 import CoreButton from '../core/CoreButton';
 import { useMediaQuery } from '@mui/material';
-
+import ProductCard from './ProductCard';
 const Home = () => {
   const isDesktop = useMediaQuery('(min-width:1200px)');
 
@@ -55,6 +55,7 @@ const Home = () => {
       </Box>
     </Box>
   );
+
   return isDesktop ? (
     <Container>
       <BackgroundComponent src="https://res.cloudinary.com/dd8im2juc/image/upload/v1740210215/main_pdl5dx.jpg">
@@ -62,11 +63,21 @@ const Home = () => {
       </BackgroundComponent>
     </Container>
   ) : (
-    <BackgroundComponent src="https://res.cloudinary.com/dd8im2juc/image/upload/v1740210215/main_pdl5dx.jpg">
-      <Container sx={{ paddingTop: '20px' }} maxWidth="lg">
-        {HomeComponents}
-      </Container>
-    </BackgroundComponent>
+    <>
+      <BackgroundComponent src="https://res.cloudinary.com/dd8im2juc/image/upload/v1740210215/main_pdl5dx.jpg">
+        <Container sx={{ paddingTop: '20px' }} maxWidth="lg">
+          {HomeComponents}
+        </Container>
+      </BackgroundComponent>
+      <Box sx={{ display: 'flex', gap: '20px' }}>
+        <ProductCard
+          title="Latest Drop"
+          description="Makaveli Jeans-Sahar"
+          price={2484.63}
+          imageUrl="https://th.bing.com/th/id/R.8d7b588525c02221e42f3e05d560704f?rik=wZva%2b414HnWaRQ&riu=http%3a%2f%2f5.imimg.com%2fdata5%2fSELLER%2fDefault%2f2020%2f10%2fMU%2fNB%2fZA%2f20506059%2fmen-s-jeans-photography-500x500.JPG&ehk=DP6emqd9%2bP8zqVhJPIPgA8fOAJpYY%2bPlWGpzfgX8RVM%3d&risl=&pid=ImgRaw&r=0"
+        />
+      </Box>
+    </>
   );
 };
 

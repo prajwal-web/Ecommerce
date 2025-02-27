@@ -14,7 +14,7 @@ export const themeOptions: ThemeOptions = {
     text: {
       primary: '#1E3A5F',
       secondary: '#6FA3C7'
-    },
+    }
   },
   typography: {
     h1: {
@@ -42,7 +42,8 @@ export const themeOptions: ThemeOptions = {
       }
     },
     h3: {
-      fontFamily: 'Bungee',
+      fontFamily: 'Space Grotesk',
+      fontWeight: 700,
       '@media (min-width: 375px)': {
         fontSize: ' 1.2rem'
       },

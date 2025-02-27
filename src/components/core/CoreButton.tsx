@@ -3,7 +3,7 @@ import { TCoreButton } from '../../types/CoreButton.types';
 
 const CoreButton = ({ text, type = 'cta', icon }: TCoreButton) => {
   return type === 'cta' ? (
-    <Button variant="contained" endIcon={<>{icon}</>}>
+    <Button variant="contained" sx={{ marginBottom: 2 }} endIcon={<>{icon}</>}>
       {text}
     </Button>
   ) : null;
