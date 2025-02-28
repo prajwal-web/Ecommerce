@@ -2,15 +2,14 @@ import { Box, Container } from '@mui/material';
 import BackgroundComponent from '../core/BackgroundComponent';
 import Home from '../feature/Home';
 import ProductCard from '../feature/ProductCard';
-import { products } from '../../mocks/products';
 import ProductCarousel from '../core/ProductCard/ProductCarousel';
-import { useState } from 'react';
-// import { ProductContext } from '../../context/ProductContext';
+import { useContext, useState } from 'react';
+import { ProductContext } from '../../context/ProductContext';
 
 const Landingpage = () => {
+  const { products } = useContext(ProductContext);
   const [translateX, setTranslateX] = useState(0);
-  // const { product } = useContext(ProductContext);
-  // console.log(product);
+  const [boxWidth, setBoxWidth] = useState(0);
   return (
     <>
       <Home />
@@ -35,12 +34,12 @@ const Landingpage = () => {
           <Box
             sx={{
               transition: 'transform 0.3s ease',
-              transform: `translateX(-${translateX}px)`
+              transform: `translateX(${translateX}px)`
             }}
-            onClick={(e) => {
+            onLoad={(e) => {
               {
                 const boxWidth = e.currentTarget.offsetWidth;
-                setTranslateX((prev) => prev + boxWidth);
+                setBoxWidth(boxWidth)
               }
             }}
           >
@@ -52,7 +51,7 @@ const Landingpage = () => {
           </Box>
         ))}
       </Box>
-      <ProductCarousel />
+      <ProductCarousel setTranslateX={setTranslateX} boxWidth={boxWidth}/>
     </>
   );
 };

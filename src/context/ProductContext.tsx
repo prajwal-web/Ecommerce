@@ -1,4 +1,16 @@
-import { createContext } from "react"
+// import { createContext } from "react"
 // import { products } from "../mocks/products"
 
-export const ProductContext = createContext({})
+// export const ProductContext = createContext({})
+
+import { createContext, SetStateAction, Dispatch } from 'react';
+import { ProductList } from '../types/product/Product.types';
+
+const initialProductsState: ProductList = [];
+
+const setProducts: Dispatch<SetStateAction<ProductList>> = () => initialProductsState;
+
+export const ProductContext = createContext({
+  products: initialProductsState,
+  setProducts
+});
