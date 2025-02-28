@@ -3,8 +3,6 @@ import { MoveLeftIcon, MoveRightIcon } from 'lucide-react';
 import { Dispatch, SetStateAction, useContext, useState } from 'react';
 import { ProductContext } from '../../../context/ProductContext';
 
-// type setProducts = Dispatch<SetStateAction<number>>;
-
 type TSetTranslateX = {
   setTranslateX: Dispatch<SetStateAction<number>>;
   boxWidth: number;
