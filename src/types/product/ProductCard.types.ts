@@ -3,4 +3,5 @@ export type TProductCard = {
   description: string;
   price: number;
   imageUrl: string;
+  carouselBtn: boolean;
 };

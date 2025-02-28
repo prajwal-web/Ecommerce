@@ -80,8 +80,9 @@ export const themeOptions: ThemeOptions = {
     },
     h4: {
       fontFamily: 'Bungee',
+      fontWeight: 400,
       '@media (min-width: 375px)': {
-        fontSize: ' 1rem'
+        fontSize: ' 1.2rem'
       },
       '@media (min-width: 768px)': {
         fontSize: '1.4rem'
@@ -92,8 +93,9 @@ export const themeOptions: ThemeOptions = {
     },
     body1: {
       fontFamily: 'Space Grotesk',
+      fontWeight: 400,
       '@media (min-width: 375px)': {
-        fontSize: ' 0.9rem'
+        fontSize: ' 1.2rem'
       },
       '@media (min-width: 768px)': {
         fontSize: '1rem'
@@ -104,8 +106,9 @@ export const themeOptions: ThemeOptions = {
     },
     body2: {
       fontFamily: 'Space Grotesk',
+      fontWeight: 400,
       '@media (min-width: 375px)': {
-        fontSize: ' 0.75rem'
+        fontSize: ' 1rem'
       },
       '@media (min-width: 768px)': {
         fontSize: '0.85rem'
