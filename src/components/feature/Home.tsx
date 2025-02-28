@@ -46,7 +46,7 @@ const Home = () => {
           gap: '20px',
           alignItems: 'flex-end',
           position: 'absolute',
-          bottom: 0,
+          bottom: 20,
           right: 0
         }}
       >
