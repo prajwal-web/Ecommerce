@@ -1,9 +1,9 @@
 import { Box, Typography } from '@mui/material';
 import CoreButton from '../CoreButton';
 
-type TProductDetailsCard = { productName: string; productPrice: number; isCrouser?: boolean };
+type TProductDetailsCard = { productName: string; productPrice: number };
 
-const ProductDetailsCard = ({ productName, productPrice, isCrouser = true }: TProductDetailsCard) => {
+const ProductCardDetails = ({ productName, productPrice }: TProductDetailsCard) => {
   return (
     <Box
       sx={{
@@ -15,13 +15,18 @@ const ProductDetailsCard = ({ productName, productPrice, isCrouser = true }: TPr
         gap: '15px'
       }}
     >
-      <Typography variant="h3" color='#080808'>{productName}</Typography>
-      <Typography variant='body1' color='#080808'>Rs. {productPrice}</Typography>
-      <Typography variant='body1' color='secondary' lineHeight={1.2}>Shipping calculated at checkout.</Typography>
+      <Typography variant="h3" color="#080808">
+        {productName}
+      </Typography>
+      <Typography variant="body1" color="#080808">
+        Rs. {productPrice}
+      </Typography>
+      <Typography variant="body1" color="secondary" lineHeight={1.2}>
+        Shipping calculated at checkout.
+      </Typography>
       <CoreButton text="Choose Options" />
-      {isCrouser && <Typography>Crouser Component</Typography>}
     </Box>
   );
 };
 
-export default ProductDetailsCard;
+export default ProductCardDetails;

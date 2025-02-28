@@ -9,7 +9,7 @@ const ProductImageCard = ({ productImg }: TProductImg) => {
     <Box
       sx={{
         width: '175px',
-        height: '215px'
+        height: '257px'
       }}
     >
       <Box

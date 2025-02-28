@@ -1,9 +1,16 @@
-import { Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import BackgroundComponent from '../core/BackgroundComponent';
 import Home from '../feature/Home';
 import ProductCard from '../feature/ProductCard';
+import { products } from '../../mocks/products';
+import ProductCarousel from '../core/ProductCard/ProductCarousel';
+import { useState } from 'react';
+// import { ProductContext } from '../../context/ProductContext';
 
 const Landingpage = () => {
+  const [translateX, setTranslateX] = useState(0);
+  // const { product } = useContext(ProductContext);
+  // console.log(product);
   return (
     <>
       <Home />
@@ -22,11 +29,30 @@ const Landingpage = () => {
           bgHeight={250}
         />
       </Container>
-      <ProductCard
-        headingText="MOST ORDERED"
-        productImg="https://images.unsplash.com/photo-1616003471864-9abfeee24576?q=80&w=1430&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        productPrice={4484.63}
-      />
+
+      <Box sx={{ display: 'flex', overflowX: 'auto' }}>
+        {products.map(() => (
+          <Box
+            sx={{
+              transition: 'transform 0.3s ease',
+              transform: `translateX(-${translateX}px)`
+            }}
+            onClick={(e) => {
+              {
+                const boxWidth = e.currentTarget.offsetWidth;
+                setTranslateX((prev) => prev + boxWidth);
+              }
+            }}
+          >
+            <ProductCard
+              headingText="MOST ORDERED"
+              productImg="https://images.unsplash.com/photo-1616003471864-9abfeee24576?q=80&w=1430&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              productPrice={4484.63}
+            />
+          </Box>
+        ))}
+      </Box>
+      <ProductCarousel />
     </>
   );
 };
