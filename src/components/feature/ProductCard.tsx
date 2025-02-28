@@ -7,7 +7,6 @@ const ProductCard = ({ title, description, price, imageUrl }: TProductCard) => {
     <Box
       sx={{
         borderRadius: '4px',
-        overflow: 'hidden',
         maxWidth: {
           xs: '100%'
         },
@@ -29,15 +28,23 @@ const ProductCard = ({ title, description, price, imageUrl }: TProductCard) => {
             }}
           />
           <Box>
-            {description && <Typography variant="h4">{description}</Typography>}
-            <Typography variant="body1">Rs. {price}</Typography>
-
-            <Typography variant="body1">Shipping calculated at checkout.</Typography>
+            {description && (
+              <Typography variant="h4" lineHeight={1.3}>
+                {description}
+              </Typography>
+            )}
+            <Typography variant="body1" sx={{ lineHeight: 1.5 }}>
+              Rs. {price}
+            </Typography>
+            <Typography variant="body1" sx={{ lineHeight: 1.5 }}>
+              Shipping calculated at checkout.
+            </Typography>
             <Box
               sx={{
                 display: 'flex',
                 alignItems: 'flex-end',
-                position: 'absolute'
+                position: 'absolute',
+                lineHeight: 1.5
               }}
             >
               <CoreButton text="Choose Options" />
