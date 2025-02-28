@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import { TBackgroundComponent } from '../../types/BackgroundComponent.types';
 
-const BackgroundComponent = ({ src, children }: TBackgroundComponent) => {
+const BackgroundComponent = ({ src, bgHeight, children }: TBackgroundComponent) => {
   return (
     <Box
       component="div"
@@ -11,6 +11,7 @@ const BackgroundComponent = ({ src, children }: TBackgroundComponent) => {
           sm: '100vw',
           md: '100%'
         },
+        height: bgHeight ? bgHeight : 'auto',
         background: `url(${src}) center center`,
         backgroundSize: 'cover'
       }}

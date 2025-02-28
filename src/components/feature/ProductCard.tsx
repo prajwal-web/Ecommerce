@@ -1,16 +1,21 @@
-import React from 'react';
 import ProductCardContainer from '../core/ProductCardContainer';
 import Heading from '../core/Heading';
-import ProductCardDetails from '../core/ProductCard/ProductCardDetails';
+import ProductCardDetails from '../core/ProductCard/ProductCard';
 import { Container } from '@mui/material';
 
-const ProductCard = () => {
+type TProductCad = {
+  headingText: string;
+  productImg: string;
+  productPrice: number;
+};
+
+const ProductCard = ({ headingText, productImg, productPrice }: TProductCad) => {
   return (
     <Container maxWidth="lg">
       <ProductCardContainer>
-        <Heading headingText="Latest Drep" />
+        <Heading headingText={headingText} />
+        <ProductCardDetails productImg={productImg} productPrice={productPrice} />
       </ProductCardContainer>
-      <ProductCardDetails />
     </Container>
   );
 };
