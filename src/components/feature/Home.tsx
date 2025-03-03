@@ -39,7 +39,7 @@ const Home = () => {
             }
           }}
         >
-          <Link to="/">
+          <Link to="products">
             <ShoppingCart size="100%" />
           </Link>
         </Box>
@@ -97,7 +97,7 @@ const Home = () => {
         showChildren={true}
         src="https://images.unsplash.com/photo-1634564235572-cd6f37694266?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       >
-        <Container sx={{ paddingTop: '30px', height: { xs: 207 } }} maxWidth="lg">
+        <Container sx={{ paddingTop: '30px', height: { xs: 207 }}} maxWidth="lg">
           {null}
         </Container>
       </BackgroundComponent>

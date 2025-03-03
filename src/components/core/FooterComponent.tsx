@@ -10,7 +10,8 @@ const FooterComponent = () => {
         borderTop: '2px solid white',
         backgroundColor: '#fff',
         position: 'relative',
-        marginTop: '1px'
+        marginTop: '1px',
+        padding:3
       }}
     >
       <Box display="flex" justifyContent="space-between" flexDirection="row">

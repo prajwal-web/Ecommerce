@@ -22,7 +22,7 @@ const CarouselComponent = ({ currentIndex, setCurrentIndex }: any) => {
   };
 
   return (
-    <Box display="flex" justifyContent="center" alignItems="center" sx={{ marginTop: 2 }}>
+    <Box display="flex" alignItems="center" sx={{ marginTop: 2, width: '100%' }}>
       <IconButton
         onClick={handlePrevious}
         disabled={currentIndex === 0}
@@ -30,11 +30,13 @@ const CarouselComponent = ({ currentIndex, setCurrentIndex }: any) => {
           color: 'black',
           backgroundColor: 'white',
           border: '2px solid black',
-          marginRight: 5
         }}
       >
         <MoveLeft />
       </IconButton>
+
+      {/* Spacer to create space between buttons */}
+      <Box sx={{ flexGrow: 1 }} />
 
       <IconButton
         disabled={currentIndex === products.length - 1}
@@ -43,7 +45,6 @@ const CarouselComponent = ({ currentIndex, setCurrentIndex }: any) => {
           color: 'black',
           backgroundColor: 'white',
           border: '2px solid black',
-          marginLeft: 5
         }}
       >
         <MoveRight />

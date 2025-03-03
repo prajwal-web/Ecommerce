@@ -8,9 +8,7 @@ import { TProductCard } from '../../types/product/ProductCard.types';
 const ProductCard = ({ title, description, price, imageUrl, carouselBtn = true }: TProductCard) => {
   const { products } = useContext(MyContext);
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const isDesktop = useMediaQuery('(min-width:600px)'); // For desktop (larger screens)
-  const isSmallMobile = useMediaQuery('(max-width:375px)'); // For small mobile screens like 375px width
+  const isDesktop = useMediaQuery('(min-width:600px)'); 
 
   useEffect(() => {
     if (products && products.length > 0) {
@@ -28,61 +26,28 @@ const ProductCard = ({ title, description, price, imageUrl, carouselBtn = true }
         width: '100%',
         backgroundColor: '#fff',
         padding: '16px',
-        maxWidth: { xs: '100%', sm: '789px', md: '585px' }, // Max width for larger sizes
-        margin: '0 auto' // Centering the product card
+        maxWidth: { xs: '100%', sm: '789px', md: '585px' },
+        margin: '0 auto'
       }}
     >
       <Typography variant="h4" sx={{ mb: 1, color: 'rgba(0, 0, 0, 1)' }}>
         {title}
       </Typography>
 
-      {/* Adjust the layout based on screen size */}
-      <Box
-        display="flex"
-        flexDirection={isSmallMobile ? 'column' : 'row'} // Stack on small mobile, row on larger screens
-        gap={2}
-        justifyContent="space-between"
-      >
-        {/* Image Section */}
-        <Box
-          sx={{
-            flex: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            overflow: 'hidden',
-            borderRadius: '4px',
-            maxWidth: isDesktop ? '400px' : '100%', // Larger image for desktop, take full width on smaller screens
-            height: isDesktop ? 'auto' : '200px' // Set a fixed height for smaller screens
-          }}
-        >
+      <Box className="row" sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width: '100%', gap: '20px' }}>
+        <Box className="column" sx={{ flex: 1, display: 'flex', alignItems: 'center',marginBottom:10 }}>
           <img
             src={productImage}
             alt={currentProduct.smallDescription}
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              transition: 'none'
-            }}
+            style={{ width: '100%', objectFit: 'cover' }}
           />
         </Box>
 
-        {/* Product Details Section */}
-        <Box
-          sx={{
-            flex: 2, // Product details take up more space
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            padding: 2
-          }}
-        >
+          
+        <Box className="column" sx={{ flex: 1, display: 'flex', flexDirection: 'column', padding: 2 }}>
           {carouselBtn ? (
             <Typography variant="body2" lineHeight={1.3} color="rgba(0, 0, 0, 1)">
-              {isDesktop
-                ? 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis corporis dolorem voluptates totam commodi est non in tempore, optio cum architecto eius! Omnis ea ullam quidem laudantium mollitia delectus illum animi sint provident. Fuga, aspernatur. Neque modi odit harum et quos saepe beatae dignissimos nam impedit corporis, voluptatum optio facilis sint vero error fugit itaque eius hic quae enim!'
-                : currentProduct.smallDescription}
+              {isDesktop ? "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, veritatis quas, eum, deleniti quidem expedita laborum porro voluptatem quod voluptatum labore harum error. Molestias nisi eius obcaecati eaque sed quas doloribus ipsum ullam animi corrupti, rerum iusto atque totam iste." : currentProduct.smallDescription}
             </Typography>
           ) : (
             description && (
