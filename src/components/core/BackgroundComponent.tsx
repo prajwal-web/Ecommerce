@@ -11,9 +11,10 @@ const BackgroundComponent = ({ src, bgHeight, children }: TBackgroundComponent) 
           sm: '100vw',
           md: '100%'
         },
-        height: bgHeight ? bgHeight : 'auto',
-        background: `url(${src}) center center`,
-        backgroundSize: 'cover'
+        height: {xs: bgHeight ? bgHeight : 'auto', lg: bgHeight ? '616px' : 'auto'},
+        background: `url(${src})`,
+        backgroundSize: 'cover', 
+        backgroundPosition: {xs: 'center', sm: 'center 20%'}
       }}
     >
       {children}

@@ -9,17 +9,28 @@ type TSetTranslateX = {
 };
 
 const ProductCarousel = ({ setTranslateX, boxWidth }: TSetTranslateX) => {
+  // const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  // console.log(windowWidth);
   const { products } = useContext(ProductContext);
   const [index, setIndex] = useState(0);
-  console.log(index);
   return (
-    <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'end', gap: 2, pr: 3 }}>
+    <Box
+      sx={{
+        // width: '100%',
+        display: { xs: 'flex' },
+        alignItems: 'center',
+        justifyContent: { xs: 'end', lg: 'space-between' },
+        gap: 2,
+        pr: 3,
+        mt: 4
+      }}
+    >
       <Box
         sx={{
           display: 'flex',
           alignContent: 'center',
           justifyContent: 'center',
-          border: '1px solid #D0D0D0',
+          border: `1px solid ${index === 0 ? '#d3d3d3' : '#000000'}`,
           borderRadius: '50%',
           px: '10px',
           py: '10px',
@@ -32,14 +43,14 @@ const ProductCarousel = ({ setTranslateX, boxWidth }: TSetTranslateX) => {
           }
         }}
       >
-        <MoveLeftIcon color="#D0D0D0" size={25} />
+        <MoveLeftIcon color={index === 0 ? '#d3d3d3' : '#000000'} size={25} />
       </Box>
       <Box
         sx={{
           display: 'flex',
           alignContent: 'center',
           justifyContent: 'center',
-          border: '1px solid #000000',
+          border: `1px solid ${index === products.length - 1 ? '#d3d3d3' : '#000000'}`,
           borderRadius: '50%',
           px: '10px',
           py: '10px',
@@ -52,7 +63,7 @@ const ProductCarousel = ({ setTranslateX, boxWidth }: TSetTranslateX) => {
           }
         }}
       >
-        <MoveRightIcon color="#000000" size={25} />
+        <MoveRightIcon color={index === products.length - 1 ? '#d3d3d3' : '#000000'} size={25} />
       </Box>
     </Box>
   );

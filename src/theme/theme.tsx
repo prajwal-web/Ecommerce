@@ -96,7 +96,7 @@ export const themeOptions: ThemeOptions = {
       fontFamily: 'Space Grotesk',
       fontWeight: 400,
       '@media (min-width: 375px)': {
-        fontSize: ' 1.2rem'
+        fontSize: ' 1rem'
       },
       '@media (min-width: 768px)': {
         fontSize: '1rem'
@@ -128,10 +128,10 @@ export const themeOptions: ThemeOptions = {
         root: {
           fontFamily: 'Space Grotesk',
           textTransform: 'capitalize',
-          fontSize: '0.8rem',
+          fontSize: '1rem',
           boxShadow: 'none',
           '@media (min-width: 375px)': {
-            fontSize: '1rem'
+            fontSize: '.9rem'
           },
           '@media (min-width: 768px)': {
             fontSize: '1.2rem'

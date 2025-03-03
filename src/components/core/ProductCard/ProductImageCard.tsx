@@ -8,14 +8,15 @@ const ProductImageCard = ({ productImg }: TProductImg) => {
   return (
     <Box
       sx={{
-        width: '175px',
-        height: '257px'
+        // width: '45%',
+        flex: 1,
+        height: {xs: '257px', sm: '100%', lg: '350px'}
       }}
     >
       <Box
         component="img"
         sx={{
-          height: '100%',
+          // height: '100%',
           width: '100%',
           objectFit: 'cover',
           objectPosition: 'center'
