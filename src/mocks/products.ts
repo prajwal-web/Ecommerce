@@ -1,6 +1,6 @@
-import { ProductList } from '../types/product/Product.types';
+import { Product } from '../types/product/Product.types';
 
-export const products: ProductList = [
+export const products: Omit<Product, 'image'>[] = [
   {
     size: {
       uk: 30,
@@ -13,11 +13,6 @@ export const products: ProductList = [
       available: true
     },
     category: 'narrow',
-    image: {
-      thumbnail: '60x60',
-      full: '250x3000',
-      product: '170x300'
-    },
     largeDescription: 'dskjacnjksd',
     smallDescription: 'aksd ckcj',
     pricing: 1200,
@@ -46,11 +41,6 @@ export const products: ProductList = [
       available: true
     },
     category: 'wide',
-    image: {
-      thumbnail: '60x60',
-      full: '250x3000',
-      product: '170x300'
-    },
     largeDescription: 'Lorem ipsum dolor sit amet.',
     smallDescription: 'Sed do eiusmod tempor.',
     pricing: 1500,
@@ -79,11 +69,6 @@ export const products: ProductList = [
       available: false
     },
     category: 'casual',
-    image: {
-      thumbnail: '60x60',
-      full: '250x3000',
-      product: '170x300'
-    },
     largeDescription: 'Lorem ipsum dolor sit amet.',
     smallDescription: 'Ut enim ad minim veniam.',
     pricing: 1400,
@@ -112,11 +97,6 @@ export const products: ProductList = [
       available: false
     },
     category: 'formal',
-    image: {
-      thumbnail: '60x60',
-      full: '250x3000',
-      product: '170x300'
-    },
     largeDescription: 'Dolor sit amet consectetur adipiscing elit.',
     smallDescription: 'Sed do eiusmod tempor incididunt.',
     pricing: 2000,
@@ -145,11 +125,6 @@ export const products: ProductList = [
       available: true
     },
     category: 'sporty',
-    image: {
-      thumbnail: '60x60',
-      full: '250x3000',
-      product: '170x300'
-    },
     largeDescription: 'Duis aute irure dolor in reprehenderit.',
     smallDescription: 'Excepteur sint occaecat cupidatat.',
     pricing: 950,
@@ -178,11 +153,6 @@ export const products: ProductList = [
       available: true
     },
     category: 'narrow',
-    image: {
-      thumbnail: '60x60',
-      full: '250x3000',
-      product: '170x300'
-    },
     largeDescription: 'Vivamus magna justo, lacinia eget consectetur.',
     smallDescription: 'Aenean euismod bibendum.',
     pricing: 1300,
@@ -211,11 +181,6 @@ export const products: ProductList = [
       available: true
     },
     category: 'casual',
-    image: {
-      thumbnail: '60x60',
-      full: '250x3000',
-      product: '170x300'
-    },
     largeDescription: 'Curabitur pretium tincidunt lacus.',
     smallDescription: 'Mauris magna turpis, gravida vel suscipit eu.',
     pricing: 1750,
@@ -244,11 +209,6 @@ export const products: ProductList = [
       available: true
     },
     category: 'formal',
-    image: {
-      thumbnail: '60x60',
-      full: '250x3000',
-      product: '170x300'
-    },
     largeDescription: 'Integer sit amet ligula eget magna ultricies vehicula.',
     smallDescription: 'Pellentesque vitae neque ut purus viverra.',
     pricing: 2200,
@@ -277,11 +237,6 @@ export const products: ProductList = [
       available: true
     },
     category: 'sporty',
-    image: {
-      thumbnail: '60x60',
-      full: '250x3000',
-      product: '170x300'
-    },
     largeDescription: 'Nullam vehicula libero sed felis.',
     smallDescription: 'Fusce vel mauris hendrerit quam.',
     pricing: 1100,
@@ -310,11 +265,6 @@ export const products: ProductList = [
       available: true
     },
     category: 'sporty',
-    image: {
-      thumbnail: '60x60',
-      full: '250x3000',
-      product: '170x300'
-    }, 
     largeDescription: 'Nullam vehicula libero sed felis.',
     smallDescription: 'Fusce vel mauris hendrerit quam.',
     pricing: 1100,

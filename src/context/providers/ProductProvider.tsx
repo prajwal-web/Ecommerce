@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ProductContext } from '../ProductContext';
-import { products as productMock } from '../../mocks/products';
+import { products } from '../../mocks/products';
 import { ProductList } from '../../types/product/Product.types';
 
 type TProductProvider = {
@@ -8,10 +8,10 @@ type TProductProvider = {
 };
 
 const ProductProvider = ({ children }: TProductProvider) => {
-  const [products, setProducts] = useState<ProductList>(productMock);
+  const [product, setProduct] = useState<ProductList>(products);
   return (
     <div>
-      <ProductContext.Provider value={{ products, setProducts }}>{children}</ProductContext.Provider>
+      <ProductContext.Provider value={{ product, setProduct }}>{children}</ProductContext.Provider>
     </div>
   );
 };
