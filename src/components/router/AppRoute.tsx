@@ -1,19 +1,17 @@
-import React from 'react'
-import { Route, Routes } from 'react-router'
-import Landingpage from '../pages/Landingpage'
-import ProductListingPage from '../pages/ProductListingPage'
-import Navbar from '../core/Navbar'
+import { BrowserRouter } from 'react-router';
+import Layout from '../Layout';
+import ProductProvider from '../../context/providers/ProductProvider';
 
 const AppRoute = () => {
   return (
     <>
-    <Navbar />
-    <Routes>
-        <Route index element={<Landingpage />} />
-        <Route path="products" element={<ProductListingPage />} />
-    </Routes>
+      <BrowserRouter>
+        <ProductProvider>
+          <Layout />
+        </ProductProvider>
+      </BrowserRouter>
     </>
-  )
-}
+  );
+};
 
-export default AppRoute
+export default AppRoute;

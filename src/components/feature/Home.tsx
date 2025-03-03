@@ -12,41 +12,6 @@ const Home = () => {
 
   const HomeComponents = (
     <Box sx={{ position: 'relative', height: { xs: 'calc(100vw*0.9)', sm: '80vh' } }}>
-      <Box sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-        <Box
-          sx={{
-            position: 'absolute',
-            left: {
-              xs: '50%',
-              sm: '2%'
-            },
-            top: { sm: '30%' },
-            transform: {
-              xs: 'translate(-50%)',
-              sm: 'translate(0)'
-            }
-          }}
-        >
-          <Link to="/">
-            <Logo />
-          </Link>
-        </Box>
-        <Box
-          sx={{
-            marginLeft: 'auto',
-            marginRight: { sm: '20px' },
-            marginTop: 2,
-            width: {
-              xs: '24px',
-              sm: '40px'
-            }
-          }}
-        >
-          <Link to="/products">
-            <ShoppingCart size="100%" color='black'/>
-          </Link>
-        </Box>
-      </Box>
       <Box
         sx={{
           display: 'flex',

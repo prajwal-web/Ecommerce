@@ -1,17 +1,11 @@
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import theme from './theme';
-import ProductProvider from './context/providers/ProductProvider';
-import { BrowserRouter } from 'react-router';
-import AppRoute from './components/router/appRoute';
+import AppRoute from './components/router/AppRoute';
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <ProductProvider>
-        <BrowserRouter>
-          <AppRoute />
-        </BrowserRouter>
-      </ProductProvider>
+      <AppRoute />
     </ThemeProvider>
   );
 }

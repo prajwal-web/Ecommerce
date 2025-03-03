@@ -5,7 +5,6 @@ import ProductCard from '../feature/ProductCard';
 import ProductCarousel from '../core/ProductCard/ProductCarousel';
 import { useContext, useState } from 'react';
 import { ProductContext } from '../../context/ProductContext';
-import Footer from '../feature/Footer';
 
 const Landingpage = () => {
   const desktop = useMediaQuery('(min-width:1200px)');
@@ -96,7 +95,6 @@ const Landingpage = () => {
       <Box sx={{ display: { lg: 'none' } }}>
         <ProductCarousel setTranslateX={setTranslateX} boxWidth={boxWidth} />
       </Box>
-      <Footer />
     </>
   );
 };
