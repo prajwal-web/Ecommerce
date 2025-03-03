@@ -9,7 +9,7 @@ const BackgroundComponent = ({ src, children, showChildren = true }: TBackground
         width: {
           xs: '100vw',
           sm: '100vw',
-          md: '100%'
+          md: 1198
         },
         background: `url(${src}) center center`,
         backgroundSize: 'cover'

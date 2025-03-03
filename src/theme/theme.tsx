@@ -51,7 +51,7 @@ export const themeOptions: ThemeOptions = {
         fontSize: '1.8rem'
       },
       '@media (min-width: 1200px)': {
-        fontSize: '2.4rem'
+        fontSize: '1.2rem'
       }
     },
     h6: {
@@ -98,7 +98,7 @@ export const themeOptions: ThemeOptions = {
         fontSize: ' 1.2rem'
       },
       '@media (min-width: 768px)': {
-        fontSize: '1rem'
+        fontSize: '1.2rem'
       },
       '@media (min-width:1200px)': {
         fontSize: '1.2rem'
@@ -111,10 +111,10 @@ export const themeOptions: ThemeOptions = {
         fontSize: ' 1rem'
       },
       '@media (min-width: 768px)': {
-        fontSize: '0.85rem'
+        fontSize: '1rem'
       },
       '@media (min-width: 1200px)': {
-        fontSize: '0.9rem'
+        fontSize: '1rem'
       }
     },
     button: {
@@ -127,10 +127,10 @@ export const themeOptions: ThemeOptions = {
         root: {
           fontFamily: 'Space Grotesk',
           textTransform: 'capitalize',
-          fontSize: '0.8rem',
+          fontSize: '1rem',
           boxShadow: 'none',
           '@media (min-width: 375px)': {
-            fontSize: '1rem'
+            fontSize: '0.8rem'
           },
           '@media (min-width: 768px)': {
             fontSize: '1.2rem'

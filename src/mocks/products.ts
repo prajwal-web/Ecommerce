@@ -16,7 +16,8 @@ export const products: ProductList = [
     image: {
       thumbnail: 'https://placehold.co/60x60',
       full: 'https://placehold.co/2500x3000',
-      product: 'https://placehold.co/170x300'
+      product:
+        'https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fdf%2F38%2Fdf38676c1cb97960a43881ac9915b0606195c955.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]'
     },
     largeDescription: 'Comfortable and stylish shoes perfect for everyday wear.',
     smallDescription: 'Stylish, comfortable shoes for daily wear.',
@@ -49,7 +50,7 @@ export const products: ProductList = [
     image: {
       thumbnail: 'https://placehold.co/60x60',
       full: 'https://placehold.co/2500x3000',
-      product: 'https://placehold.co/170x300'
+      product: 'https://th.bing.com/th/id/OIP.s1S-zDM6LmDDVk3wZ9QcVQHaLH?rs=1&pid=ImgDetMain'
     },
     largeDescription: 'Elegant formal shoes for business meetings and events.',
     smallDescription: 'Formal shoes designed for professional wear.',
@@ -82,7 +83,7 @@ export const products: ProductList = [
     image: {
       thumbnail: 'https://placehold.co/60x60',
       full: 'https://placehold.co/2500x3000',
-      product: 'https://placehold.co/170x300'
+      product: 'https://th.bing.com/th/id/OIP.52TUgkqsOhYo-FXSYLiZgAHaJQ?w=1584&h=1980&rs=1&pid=ImgDetMain'
     },
     largeDescription: 'Sporty sneakers for active lifestyles, lightweight and breathable.',
     smallDescription: 'Ideal sneakers for sports and workouts.',
@@ -115,7 +116,8 @@ export const products: ProductList = [
     image: {
       thumbnail: 'https://placehold.co/60x60',
       full: 'https://placehold.co/2500x3000',
-      product: 'https://placehold.co/170x300'
+      product:
+        'https://www.jeanswholesaler.in/2315-thickbox_default/royal-spider-men-s-casual-classic-jeans-rs-5003.jpg'
     },
     largeDescription: 'Trendy sneakers with a touch of elegance, perfect for casual outings.',
     smallDescription: 'Stylish sneakers for daily wear.',
@@ -148,7 +150,7 @@ export const products: ProductList = [
     image: {
       thumbnail: 'https://placehold.co/60x60',
       full: 'https://placehold.co/2500x3000',
-      product: 'https://placehold.co/170x300'
+      product: 'https://th.bing.com/th/id/OIP.Y3rs670VXJ0g2A_hIkF4xAAAAA?rs=1&pid=ImgDetMain'
     },
     largeDescription: 'Casual slip-ons for effortless style and comfort.',
     smallDescription: 'Easy-to-wear slip-ons for casual occasions.',
@@ -181,7 +183,7 @@ export const products: ProductList = [
     image: {
       thumbnail: 'https://placehold.co/60x60',
       full: 'https://placehold.co/2500x3000',
-      product: 'https://placehold.co/170x300'
+      product: 'https://th.bing.com/th/id/OIP.6GVO4YAAb-82r1Ws_9bQnAHaLn?w=1224&h=1920&rs=1&pid=ImgDetMain'
     },
     largeDescription: 'Fashion-forward boots, ideal for colder weather.',
     smallDescription: 'Durable boots for the winter season.',
@@ -214,7 +216,7 @@ export const products: ProductList = [
     image: {
       thumbnail: 'https://placehold.co/60x60',
       full: 'https://placehold.co/2500x3000',
-      product: 'https://placehold.co/170x300'
+      product: 'https://th.bing.com/th/id/OIP.EgQDxcgYAsG5mnqi6U8RiQHaJ4?w=900&h=1200&rs=1&pid=ImgDetMain'
     },
     largeDescription: 'Chic ankle boots that match any outfit.',
     smallDescription: 'Ankle boots for versatile styling.',
@@ -247,7 +249,8 @@ export const products: ProductList = [
     image: {
       thumbnail: 'https://placehold.co/60x60',
       full: 'https://placehold.co/2500x3000',
-      product: 'https://placehold.co/170x300'
+      product:
+        'https://cdn.pixelspray.io/v2/black-bread-289bfa/iix9pB/wrkr/t.resize(h:1440,w:1080)/data/gas/17042023new/410366118_Z273_4.jpg'
     },
     largeDescription: 'Comfortable loafers that combine style with functionality.',
     smallDescription: 'Stylish loafers for casual wear.',
@@ -280,7 +283,7 @@ export const products: ProductList = [
     image: {
       thumbnail: 'https://placehold.co/60x60',
       full: 'https://placehold.co/2500x3000',
-      product: 'https://placehold.co/170x300'
+      product: 'https://th.bing.com/th/id/OIP.dc0icNywWZLKVhdYMmBgcQAAAA?rs=1&pid=ImgDetMain'
     },
     largeDescription: 'Elegant formal shoes for sophisticated events and meetings.',
     smallDescription: 'Classy formal shoes for business and events.',

@@ -8,7 +8,8 @@ const Logo = () => {
       sx={{
         width: {
           xs: '56px',
-          sm: '100px'
+          sm: '100px',
+          cursor: 'pointer'
         }
       }}
       height="auto"
