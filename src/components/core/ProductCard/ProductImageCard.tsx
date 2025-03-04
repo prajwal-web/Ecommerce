@@ -16,7 +16,7 @@ const ProductImageCard = ({ productImg }: TProductImg) => {
       <Box
         component="img"
         sx={{
-          // height: '100%',
+          height: '100%',
           width: '100%',
           objectFit: 'cover',
           objectPosition: 'center'
