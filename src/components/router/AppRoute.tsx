@@ -5,11 +5,11 @@ import ProductProvider from '../../context/providers/ProductProvider';
 const AppRoute = () => {
   return (
     <>
-      <BrowserRouter>
-        <ProductProvider>
+      <ProductProvider>
+        <BrowserRouter>
           <Layout />
-        </ProductProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </ProductProvider>
     </>
   );
 };

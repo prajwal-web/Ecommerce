@@ -9,9 +9,7 @@ type TSetTranslateX = {
 };
 
 const ProductCarousel = ({ setTranslateX, boxWidth }: TSetTranslateX) => {
-  // const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
-  // console.log(windowWidth);
-  const { products } = useContext(ProductContext);
+  const { product } = useContext(ProductContext);
   const [index, setIndex] = useState(0);
   return (
     <Box
@@ -50,20 +48,20 @@ const ProductCarousel = ({ setTranslateX, boxWidth }: TSetTranslateX) => {
           display: 'flex',
           alignContent: 'center',
           justifyContent: 'center',
-          border: `1px solid ${index === products.length - 1 ? '#d3d3d3' : '#000000'}`,
+          border: `1px solid ${index === product.length - 1 ? '#d3d3d3' : '#000000'}`,
           borderRadius: '50%',
           px: '10px',
           py: '10px',
           cursor: 'pointer'
         }}
         onClick={() => {
-          if (index < products.length - 1) {
+          if (index < product.length - 1) {
             setIndex((prev) => (prev = prev + 1));
             setTranslateX((prev) => prev - boxWidth);
           }
         }}
       >
-        <MoveRightIcon color={index === products.length - 1 ? '#d3d3d3' : '#000000'} size={25} />
+        <MoveRightIcon color={index === product.length - 1 ? '#d3d3d3' : '#000000'} size={25} />
       </Box>
     </Box>
   );

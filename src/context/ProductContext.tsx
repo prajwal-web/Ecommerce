@@ -1,14 +1,9 @@
-// import { createContext } from "react"
-// import { products } from "../mocks/products"
-
-// export const ProductContext = createContext({})
-
 import { createContext, SetStateAction, Dispatch } from 'react';
-import { ProductList } from '../types/product/Product.types';
+import { ProductList, TOmitImage } from '../types/product/Product.types';
 
 const initialProductsState: ProductList = [];
 
-const setProducts: Dispatch<SetStateAction<ProductList>> = () => initialProductsState;
+const setProducts: Dispatch<SetStateAction<TOmitImage>> = () => initialProductsState;
 
 export const ProductContext = createContext({
   products: initialProductsState,
