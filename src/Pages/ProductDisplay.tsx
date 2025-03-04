@@ -1,41 +1,35 @@
 import { Box, Button, Rating, TextField, Typography } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { useState } from 'react';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 const ProductDisplay = () => {
-  const [btnTxt, setBtnTxt] = useState(' Add to Cart');
+  const [btnTxt, setBtnTxt] = useState('Add to Cart');
   const [isBool, setIsBool] = useState(true);
   const [loading, setLoading] = useState(false);
   const [pincode, setPincode] = useState('');
   const [pincodeEntered, setPincodeEntered] = useState('');
 
   const reviews = [
-    {
-      review: 'Great fit, Cool designs!!.',
-      color: '#4CAF50'
-    },
-    {
-      review: "It's good, but takes a long time to deliver.",
-      color: '#FFC107'
-    },
-    {
-      review: 'Great fit, Cool designs!!.',
-      color: '#FFC107'
-    },
-    {
-      review: 'Awesome product for GenZ.',
-      color: '#4CAF50'
-    }
+    { review: 'Great fit, Cool designs!!.', color: '#4CAF50' },
+    { review: "It's good, but takes a long time to deliver.", color: '#FFC107' },
+    { review: 'Great fit, Cool designs!!.', color: '#FFC107' },
+    { review: 'Awesome product for GenZ.', color: '#4CAF50' }
+  ];
+
+  const productImages = [
+    'https://images.unsplash.com/photo-1579310962131-aa21f240d986?q=80&w=1374&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1579310962131-aa21f240d986?q=80&w=1374&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1579310962131-aa21f240d986?q=80&w=1374&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1579310962131-aa21f240d986?q=80&w=1374&auto=format&fit=crop'
   ];
 
   const handleButtonClick = () => {
     if (pincode.length > 4 && pincode.length <= 8) {
       setBtnTxt('Added');
       setLoading(true);
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
-
+      setTimeout(() => setLoading(false), 2000);
       setPincodeEntered(pincode);
       setIsBool(false);
       setPincode('');
@@ -58,18 +52,27 @@ const ProductDisplay = () => {
       }}
     >
       <Box display="flex" justifyContent="center" alignItems="center">
-        <Box
-          component="img"
-          src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F24%2F45%2F24458b4ee703c2ef5899c2586da0f442ca2e0a1a.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"
-          alt="Makaveli Jeans - Sahara"
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            width: 250,
-            height: 'auto',
-            borderRadius: 1
-          }}
-        />
+      <Carousel 
+  width={'250px'} 
+  showStatus={false} 
+  autoPlay 
+  infiniteLoop 
+  showThumbs={false} 
+  interval={3000} 
+  transitionTime={800}
+>
+  {productImages.map((img, index) => (
+    <Box key={index} sx={{ p: 1 }}>
+      <Box
+        component="img"
+        src={img}
+        alt={`Product Image ${index + 1}`}
+        sx={{ width: '100%', height: 'auto', borderRadius: 1 }}
+      />
+    </Box>
+  ))}
+</Carousel>
+
       </Box>
 
       <Box sx={{ mt: 5 }}>
@@ -88,16 +91,12 @@ const ProductDisplay = () => {
           </Box>
         </Box>
 
-        <Box
-          display="flex"
-          gap={7}
-          justifyContent={{ xs: 'flex-start', md: 'flex-start', sm: 'flex-start' }}
-          alignItems="center"
-        >
+        
+        <Box display="flex" gap={7} alignItems="center">
           <Typography variant="body1" color="black" mt={2}>
             Sizes
           </Typography>
-          <Box sx={{ display: 'flex', gap: 1, mt: 1, alignItems: 'center', height: '28px' }}>
+          <Box sx={{ display: 'flex', gap: 1, mt: 1 }}>
             {['28', '30', '32', '34', '36'].map((size) => (
               <Box
                 key={size}
@@ -117,30 +116,18 @@ const ProductDisplay = () => {
           </Box>
         </Box>
 
-        {isBool && (
-          <Box
-            sx={{ mt: 2, gap: 7 }}
-            display="flex"
-            justifyContent={{ xs: 'center', md: 'flex-start', sm: 'flex-start' }}
-            alignItems="center"
-          >
+        {isBool ? (
+          <Box display="flex" gap={7} alignItems="center" sx={{ mt: 2 }}>
             <Typography variant="body1" color="black">
               Check pincode
             </Typography>
             <TextField
               onChange={(e) => setPincode(e.target.value)}
-              sx={{ width: { xs: '146px', sm: '200px', md: '250px', color: 'black' } }}
+              sx={{ width: { xs: '146px', sm: '200px', md: '250px' }, color: 'black' }}
             />
           </Box>
-        )}
-
-        {!isBool && (
-          <Box
-            sx={{ mt: 2, gap: 7 }}
-            display="flex"
-            justifyContent={{ xs: 'center', md: 'flex-start', sm: 'flex-start' }}
-            alignItems="center"
-          >
+        ) : (
+          <Box display="flex" gap={7} alignItems="center" sx={{ mt: 2 }}>
             <Typography variant="body1" color="#4CAF50">
               Delivery in two days
             </Typography>
@@ -150,6 +137,7 @@ const ProductDisplay = () => {
           </Box>
         )}
 
+       
         <Box sx={{ marginTop: 3 }}>
           <Button
             variant="contained"
@@ -163,50 +151,40 @@ const ProductDisplay = () => {
           </Button>
         </Box>
 
+       
         <Typography variant="h4" mt={3} color="black">
           Description
         </Typography>
         <Box sx={{ pl: 3, mt: 1, color: 'black' }}>
-          <Typography variant="body2" mt={1}>
-            Loose fit
-          </Typography>
-          <Typography variant="body2" mt={1}>
-            Wide Leg Fit
-          </Typography>
-          <Typography variant="body2" mt={1}>
-            Fashion printed design
-          </Typography>
-          <Typography variant="body2" mt={1}>
-            Available in multiple sizes
-          </Typography>
+          <Typography variant="body2" mt={1}>Loose fit</Typography>
+          <Typography variant="body2" mt={1}>Wide Leg Fit</Typography>
+          <Typography variant="body2" mt={1}>Fashion printed design</Typography>
+          <Typography variant="body2" mt={1}>Available in multiple sizes</Typography>
         </Box>
       </Box>
 
       <Typography variant="h4" mt={3} color="black">
         Reviews
       </Typography>
-
-      <Box display="flex" gap={2} flexDirection={{ xs: 'column', sm: 'column' }} sx={{ mt: 2 }}>
+      <Box display="flex" flexDirection="column" sx={{ mt: 2 }}>
         {reviews.map((item, index) => (
-          <Box key={index} display="flex" gap={2} flexDirection={{ xs: 'row', sm: 'row' }}>
+          <Box key={index} display="flex" gap={2} sx={{marginTop:{xs:1,sm:2}}}>
             <Typography
               variant="body2"
-              color="black"
               sx={{
-                height: { xs: 35, sm: 40 },
-                width: { xs: 35, sm: 40 },
+                height: 40,
+                width: 40,
                 borderRadius: '50%',
                 background: item.color,
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+          
               }}
             >
               3.2
             </Typography>
-            <Typography variant="body2" color="black">
-              {item.review}
-            </Typography>
+            <Typography variant="body2" color="black" >{item.review}</Typography>
           </Box>
         ))}
       </Box>
