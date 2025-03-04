@@ -8,7 +8,7 @@ import { ProductContext } from '../../context/ProductContext';
 
 const Landingpage = () => {
   const desktop = useMediaQuery('(min-width:1200px)');
-  const { products } = useContext(ProductContext);
+  const { product } = useContext(ProductContext);
   const [translateX, setTranslateX] = useState(0);
   const [boxWidth, setBoxWidth] = useState(0);
 
@@ -26,7 +26,7 @@ const Landingpage = () => {
         {desktop && (
           <Box sx={{ width: '45%' }}>
             <Box sx={{ display: 'flex', overflow: 'hidden' }}>
-              {products.map((item, index) => (
+              {product.map((item, index) => (
                 <Box
                   sx={{
                     transition: 'transform 0.3s ease',
@@ -68,7 +68,7 @@ const Landingpage = () => {
       </Box>
       <Container maxWidth="lg" sx={{ display: { lg: 'none' } }}>
         <Box sx={{ display: 'flex', overflow: 'hidden', width: '100%' }}>
-          {products.map((item, index) => (
+          {product.map((item, index) => (
             <Box
               sx={{
                 transition: 'transform 0.3s ease',

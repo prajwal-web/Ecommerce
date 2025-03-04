@@ -4,10 +4,14 @@ import { getProducts } from './getProducts';
 
 export default function initCustomFetch() {
   (() => {
+    console.log("Rahul")
     window.fetch = async (input: RequestInfo | URL, _params?: RequestInit): Promise<Response> => {
       const url = input instanceof Request ? input.url : input.toString();
+      console.log(url)
       const urlObj = new URL(url, window.location.origin);
+      console.log(urlObj)
       const queryParams: Record<string, string> = Object.fromEntries(urlObj.searchParams.entries());
+      console.log(queryParams)
 
       switch (urlObj.pathname) {
         case '/logo': {

@@ -28,3 +28,4 @@ export type Product = {
 export type ProductList = Product[];
 export type TProductListComponent = Omit<Product, 'quality' & 'suitability' & 'largeDescription' & 'category'>;
 export type TCarousel = Pick<Product, 'pricing' | 'smallDescription' | 'image' | 'id'>
+export type TOmitImage = Omit<ProductList, 'image'>
