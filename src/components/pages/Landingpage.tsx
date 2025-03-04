@@ -26,7 +26,7 @@ const Landingpage = () => {
         {desktop && (
           <Box sx={{ width: '45%' }}>
             <Box sx={{ display: 'flex', overflow: 'hidden' }}>
-              {products.map((item, index) => (
+              {products.map((_item, index) => (
                 <Box
                   sx={{
                     transition: 'transform 0.3s ease',
@@ -57,7 +57,7 @@ const Landingpage = () => {
         <Container
           maxWidth="lg"
           sx={{
-            px: { xs: 0, lg: 2 } // No horizontal padding for small screens, padding for lg and larger
+            px: { xs: 0, lg: 2 }
           }}
         >
           <BackgroundComponent
@@ -68,7 +68,7 @@ const Landingpage = () => {
       </Box>
       <Container maxWidth="lg" sx={{ display: { lg: 'none' } }}>
         <Box sx={{ display: 'flex', overflow: 'hidden', width: '100%' }}>
-          {products.map((item, index) => (
+          {products.map((_item, index) => (
             <Box
               sx={{
                 transition: 'transform 0.3s ease',
