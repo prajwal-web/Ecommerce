@@ -1,12 +1,13 @@
 import { Box, Button, TextField, Typography } from '@mui/material';
-import React, { useState } from 'react';
-import HalfRating from '../../mui/HalfRating';
-import { jeanSize } from '../../constants/uiConstants';
+import { useState } from 'react';
+import HalfRating from '../../../mui/HalfRating';
+import { jeanSize } from '../../../constants/uiConstants';
 import { CheckCircle2 } from 'lucide-react';
 
 const ProductDetails = () => {
   const [sizeMatch, setSizeMatch] = useState(0);
   const [isAdded, setIsAdded] = useState(false);
+  const [isLoading] = useState(false);
   const [pincode, setPincode] = useState('');
   return (
     <>
@@ -71,19 +72,26 @@ const ProductDetails = () => {
             <Typography variant="body1" color="#61B700" sx={{ flex: 2 }}>
               Delivery in two days
             </Typography>
-            <Typography variant="body1" color="#080808" sx={{ flex: 1 }}>
-              {pincode}
-            </Typography>
+            <Box sx={{ flex: 1, display: 'flex', alignItems: 'center', gap: .5 }}>
+              <Typography variant="body1" color="#080808" sx={{ flex: 1 }}>
+                {pincode}
+              </Typography>
+              <Typography variant="body2" color="#6FA3C7" sx={{ flex: 0.2, cursor: 'pointer' }}>
+                {'change'}
+              </Typography>
+            </Box>
           </Box>
         )}
         <Button
+          loading={isLoading}
           onClick={() => {
-            console.log('Pincode:', pincode);
             if (pincode.length > 4) {
               setIsAdded(true);
+              // setIsLoading(true);
               setTimeout(() => {
-                setIsAdded(false)
-              }, 2000)
+                setIsAdded(false);
+                // setIsLoading(false);
+              }, 2000);
             }
           }}
           startIcon={isAdded && <CheckCircle2 />}
