@@ -1,8 +1,3 @@
-// import { createContext } from "react"
-// import { products } from "../mocks/products"
-
-// export const ProductContext = createContext({})
-
 import { createContext, SetStateAction, Dispatch } from 'react';
 import { ProductList } from '../types/product/Product.types';
 
