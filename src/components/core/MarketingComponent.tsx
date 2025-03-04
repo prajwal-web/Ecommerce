@@ -10,6 +10,7 @@ const MarketingComponent = ({
   return type === 'main_ghp' ? (
     <Box
       sx={{
+        borderRadius: 3,
         background: backgroundColor,
         padding: {
           xs: '24px 12px',

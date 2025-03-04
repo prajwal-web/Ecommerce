@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import { TBackgroundComponent } from '../../types/BackgroundComponent.types';
 
-const BackgroundComponent = ({ src, children, showChildren = true }: TBackgroundComponent) => {
+const BackgroundComponent = ({ src, children, bgHeight, showChildren = true }: TBackgroundComponent) => {
   return (
     <Box
       component="div"
@@ -11,8 +11,14 @@ const BackgroundComponent = ({ src, children, showChildren = true }: TBackground
           sm: '100vw',
           md: 1198
         },
-        background: `url(${src}) center center`,
-        backgroundSize: 'cover'
+        height: {
+          xs: bgHeight ? bgHeight : 'auto',
+          sm: bgHeight ? bgHeight : 'auto',
+          lg: bgHeight ? 'bgHeight' : '616PX'
+        },
+        background: `url(${src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: { xs: 'center', sm: 'center 20%' }
       }}
     >
       {showChildren && children}
@@ -22,13 +28,12 @@ const BackgroundComponent = ({ src, children, showChildren = true }: TBackground
 
 export default BackgroundComponent;
 
-
 // import { Box } from '@mui/material';
 // import { TBackgroundComponent } from '../../types/BackgroundComponent.types';
 
 // const BackgroundComponent = ({ src, children, showChildren = true }: TBackgroundComponent) => {
 //   return (
-    
+
 //     <Box
 //       component="div"
 //       sx={{
@@ -41,7 +46,7 @@ export default BackgroundComponent;
 //         backgroundPosition: 'center', // Ensures proper cropping
 //         backgroundSize: 'cover', // Crops to fit screen
 //         backgroundRepeat: 'no-repeat',
-       
+
 //       }}
 //     >
 //       {showChildren && children}

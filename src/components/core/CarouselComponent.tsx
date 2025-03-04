@@ -29,7 +29,7 @@ const CarouselComponent = ({ currentIndex, setCurrentIndex }: any) => {
         sx={{
           color: 'black',
           backgroundColor: 'white',
-          border: '2px solid black',
+          border: '2px solid black'
         }}
       >
         <MoveLeft />
@@ -44,7 +44,7 @@ const CarouselComponent = ({ currentIndex, setCurrentIndex }: any) => {
         sx={{
           color: 'black',
           backgroundColor: 'white',
-          border: '2px solid black',
+          border: '2px solid black'
         }}
       >
         <MoveRight />

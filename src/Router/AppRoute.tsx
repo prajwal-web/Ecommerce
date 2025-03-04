@@ -1,17 +1,17 @@
-
-import { Route, Routes } from 'react-router'
-import Home from '../components/feature/Home'
-import ProductListingDetailsPage from '../Pages/ProductListingDetailsPage'
+import { BrowserRouter } from 'react-router';
+import Layout from './Layout';
+import ContextProvider from '../Contexts/ContextProvider';
 
 const AppRoute = () => {
   return (
     <>
-    <Routes>
-        <Route index element={<Home />} />
-        <Route path="products" element={<ProductListingDetailsPage />} />
-    </Routes>
+      <BrowserRouter>
+        <ContextProvider>
+          <Layout />
+        </ContextProvider>
+      </BrowserRouter>
     </>
-  )
-}
+  );
+};
 
-export default AppRoute
+export default AppRoute;
