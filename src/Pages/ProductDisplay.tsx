@@ -2,7 +2,7 @@ import { Box, Button, Rating, TextField, Typography } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { useState } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
+import SliderImages from '../components/SliderImages';
 
 const ProductDisplay = () => {
   const [btnTxt, setBtnTxt] = useState('Add to Cart');
@@ -16,13 +16,6 @@ const ProductDisplay = () => {
     { review: "It's good, but takes a long time to deliver.", color: '#FFC107' },
     { review: 'Great fit, Cool designs!!.', color: '#FFC107' },
     { review: 'Awesome product for GenZ.', color: '#4CAF50' }
-  ];
-
-  const productImages = [
-    'https://images.unsplash.com/photo-1579310962131-aa21f240d986?q=80&w=1374&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1579310962131-aa21f240d986?q=80&w=1374&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1579310962131-aa21f240d986?q=80&w=1374&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1579310962131-aa21f240d986?q=80&w=1374&auto=format&fit=crop'
   ];
 
   const handleButtonClick = () => {
@@ -52,27 +45,7 @@ const ProductDisplay = () => {
       }}
     >
       <Box display="flex" justifyContent="center" alignItems="center">
-      <Carousel 
-  width={'250px'} 
-  showStatus={false} 
-  autoPlay 
-  infiniteLoop 
-  showThumbs={false} 
-  interval={3000} 
-  transitionTime={800}
->
-  {productImages.map((img, index) => (
-    <Box key={index} sx={{ p: 1 }}>
-      <Box
-        component="img"
-        src={img}
-        alt={`Product Image ${index + 1}`}
-        sx={{ width: '100%', height: 'auto', borderRadius: 1 }}
-      />
-    </Box>
-  ))}
-</Carousel>
-
+        <SliderImages />
       </Box>
 
       <Box sx={{ mt: 5 }}>
@@ -91,7 +64,6 @@ const ProductDisplay = () => {
           </Box>
         </Box>
 
-        
         <Box display="flex" gap={7} alignItems="center">
           <Typography variant="body1" color="black" mt={2}>
             Sizes
@@ -137,7 +109,6 @@ const ProductDisplay = () => {
           </Box>
         )}
 
-       
         <Box sx={{ marginTop: 3 }}>
           <Button
             variant="contained"
@@ -151,15 +122,22 @@ const ProductDisplay = () => {
           </Button>
         </Box>
 
-       
         <Typography variant="h4" mt={3} color="black">
           Description
         </Typography>
         <Box sx={{ pl: 3, mt: 1, color: 'black' }}>
-          <Typography variant="body2" mt={1}>Loose fit</Typography>
-          <Typography variant="body2" mt={1}>Wide Leg Fit</Typography>
-          <Typography variant="body2" mt={1}>Fashion printed design</Typography>
-          <Typography variant="body2" mt={1}>Available in multiple sizes</Typography>
+          <Typography variant="body2" mt={1}>
+            Loose fit
+          </Typography>
+          <Typography variant="body2" mt={1}>
+            Wide Leg Fit
+          </Typography>
+          <Typography variant="body2" mt={1}>
+            Fashion printed design
+          </Typography>
+          <Typography variant="body2" mt={1}>
+            Available in multiple sizes
+          </Typography>
         </Box>
       </Box>
 
@@ -168,7 +146,7 @@ const ProductDisplay = () => {
       </Typography>
       <Box display="flex" flexDirection="column" sx={{ mt: 2 }}>
         {reviews.map((item, index) => (
-          <Box key={index} display="flex" gap={2} sx={{marginTop:{xs:1,sm:2}}}>
+          <Box key={index} display="flex" gap={2} sx={{ marginTop: { xs: 1, sm: 2 } }}>
             <Typography
               variant="body2"
               sx={{
@@ -178,13 +156,14 @@ const ProductDisplay = () => {
                 background: item.color,
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-          
+                justifyContent: 'center'
               }}
             >
               3.2
             </Typography>
-            <Typography variant="body2" color="black" >{item.review}</Typography>
+            <Typography variant="body2" color="black">
+              {item.review}
+            </Typography>
           </Box>
         ))}
       </Box>

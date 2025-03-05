@@ -20,10 +20,11 @@ const Navbar = () => {
     >
       <Box
         sx={{
-          width: { xs: '50%', md: '25%' },
+          width: { xs: '50%', md: '35%' },
           display: 'flex',
           justifyContent: { xs: 'end' },
-          alignItems: 'center'
+          alignItems: 'center',
+          cursor: 'pointer'
         }}
       >
         <Link to="/">
@@ -31,21 +32,20 @@ const Navbar = () => {
         </Link>
       </Box>
       <Box
-  sx={{
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    position: 'absolute',  // Ensure it's positioned absolutely
-    top: 10,               // Adjust position from the top
-    right: 20,             // Aligns it to the right
-    width: '100%'          // Ensure it spans the full width
-  }}
->
-  <Link to="productdisplay">
-    <ShoppingCart color="purple" size="40px" />
-  </Link>
-</Box>
-
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'flex-end',
+          position: 'absolute',
+          top: 10,
+          right: 20,
+          width: '100%'
+        }}
+      >
+        <Link to="productdisplay">
+          <ShoppingCart color="purple" size="40px" />
+        </Link>
+      </Box>
     </Container>
   );
 };
