@@ -1,9 +1,18 @@
-import { ThemeProvider } from '@mui/material';
-import theme from './theme/theme';
+import { ThemeProvider, CssBaseline } from '@mui/material';
+import theme from './theme';
+import './styles/index.css';
+import AppRoute from './Router/AppRoute';
+import { useEffect } from 'react';
+import initCustomFetch from './mocks';
+
 function App() {
+  useEffect(() => {
+    initCustomFetch();
+  }, []);
   return (
     <ThemeProvider theme={theme}>
-      <h1>hello world</h1>
+      <CssBaseline />
+      <AppRoute />
     </ThemeProvider>
   );
 }
